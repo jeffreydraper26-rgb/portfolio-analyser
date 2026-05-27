@@ -11,6 +11,7 @@ st.title("Portfolio Analyser")
 st.markdown("Compare your portfolio's historical performance against the efficient frontier and a benchmark.")
 
 # ---- SIDEBAR INPUTS ---- #
+st.sidebar.title("Draper Models")
 st.sidebar.header("Portfolio Inputs")
 
 # Tickers and weights
