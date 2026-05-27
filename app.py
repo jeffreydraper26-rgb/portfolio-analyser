@@ -68,10 +68,7 @@ with st.spinner("Downloading data and running optimisation..."):
 
     try:
         # ---- DOWNLOAD DATA ---- #
-        from dotenv import load_dotenv
-        import os
-        load_dotenv()
-        fred = Fred(api_key=os.getenv("FRED_API_KEY"))
+        fred = Fred(api_key=st.secrets["FRED_API_KEY"])
         all_tickers = list(set(tickers + [benchmark]))
         prices = yf.download(all_tickers, start=str(start_date), end=str(end_date), interval="1mo")["Close"]
 

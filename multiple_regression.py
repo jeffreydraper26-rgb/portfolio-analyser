@@ -7,10 +7,7 @@ import numpy as np
 from sklearn.linear_model import LinearRegression
 
 # ---- SETUP ---- #
-from dotenv import load_dotenv
-import os
-load_dotenv()
-fred = Fred(api_key=os.getenv("FRED_API_KEY"))
+fred = Fred(api_key=st.secrets["FRED_API_KEY"])
 
 # ---- DOWNLOAD DATA ---- #
 jpm = yf.download("JPM", start="2000-01-01", end="2025-01-01")

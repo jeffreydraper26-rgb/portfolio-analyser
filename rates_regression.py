@@ -5,10 +5,7 @@ from fredapi import Fred
 import yfinance as yf
 
 # ---- SETUP ---- #
-from dotenv import load_dotenv
-import os
-load_dotenv()
-fred = Fred(api_key=os.getenv("FRED_API_KEY"))
+fred = Fred(api_key=st.secrets["FRED_API_KEY"])
 
 # ---- DOWNLOAD DATA ---- #
 spy = yf.download("SPY", start="2000-01-01", end="2025-01-01")

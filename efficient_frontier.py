@@ -5,10 +5,7 @@ import yfinance as yf
 from fredapi import Fred
 
 # ---- SETUP ---- #
-from dotenv import load_dotenv
-import os
-load_dotenv()
-fred = Fred(api_key=os.getenv("FRED_API_KEY"))
+fred = Fred(api_key=st.secrets["FRED_API_KEY"])
 
 # ---- SETTINGS ---- #
 tickers = ["SPY", "JPM", "META", "V"]
